@@ -28,6 +28,7 @@ A URL shortener web application built with Next.js 16 (App Router), React 19, Ty
 5. **Database access is server-only** — all queries run in Server Components, Server Actions, or route handlers.
 6. **Use `cn()` for class merging** — never concatenate Tailwind strings manually.
 7. **Do not edit `components/ui/`** — these are shadcn-generated; extend via composition.
+8. **Never use `middleware.ts`** — `middleware.ts` is deprecated in the version of Next.js used in this project (Next.js 16). Use `proxy.ts` instead for all middleware/proxy needs.
 
 ## Development Commands
 
