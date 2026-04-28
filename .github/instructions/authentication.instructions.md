@@ -1,3 +1,7 @@
+---
+description: Read this before implementing or modifying authentication in the project.
+---
+
 # Authentication
 
 ## Overview
@@ -64,13 +68,13 @@ import { SignInButton, SignUpButton } from "@clerk/nextjs";
 
 ## UI Components
 
-| Component | Purpose |
-|---|---|
-| `<SignInButton mode="modal">` | Opens the Clerk sign-in modal |
-| `<SignUpButton mode="modal">` | Opens the Clerk sign-up modal |
-| `<UserButton>` | User avatar with account management dropdown |
-| `<SignedIn>` | Renders children only when authenticated |
-| `<Show when="signed-out">` | Renders children only when unauthenticated |
+| Component                     | Purpose                                      |
+| ----------------------------- | -------------------------------------------- |
+| `<SignInButton mode="modal">` | Opens the Clerk sign-in modal                |
+| `<SignUpButton mode="modal">` | Opens the Clerk sign-up modal                |
+| `<UserButton>`                | User avatar with account management dropdown |
+| `<SignedIn>`                  | Renders children only when authenticated     |
+| `<Show when="signed-out">`    | Renders children only when unauthenticated   |
 
 ## Getting the Current User
 

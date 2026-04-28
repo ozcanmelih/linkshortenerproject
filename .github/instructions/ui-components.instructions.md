@@ -1,3 +1,7 @@
+---
+description: Read this before implementing or modifying ui compnents in the project.
+---
+
 # UI Components
 
 ## Overview
