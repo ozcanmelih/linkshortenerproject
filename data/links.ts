@@ -12,7 +12,7 @@ export async function getLinksByUserId(userId: string): Promise<Link[]> {
 }
 
 export async function createLink(
-  data: Pick<NewLink, "slug" | "url" | "userId">
+  data: Pick<NewLink, "slug" | "url" | "userId">,
 ): Promise<Link> {
   const [link] = await db.insert(links).values(data).returning();
   return link;
@@ -21,7 +21,7 @@ export async function createLink(
 export async function updateLink(
   id: number,
   userId: string,
-  data: Pick<NewLink, "slug" | "url">
+  data: Pick<NewLink, "slug" | "url">,
 ): Promise<Link | null> {
   const [link] = await db
     .update(links)
@@ -31,10 +31,7 @@ export async function updateLink(
   return link ?? null;
 }
 
-export async function deleteLink(
-  id: number,
-  userId: string
-): Promise<boolean> {
+export async function deleteLink(id: number, userId: string): Promise<boolean> {
   const result = await db
     .delete(links)
     .where(and(eq(links.id, id), eq(links.userId, userId)))

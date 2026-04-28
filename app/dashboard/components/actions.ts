@@ -11,14 +11,14 @@ const LinkSchema = z.object({
     .min(1, "Slug is required")
     .regex(
       /^[a-z0-9-]+$/,
-      "Slug may only contain lowercase letters, numbers, and hyphens"
+      "Slug may only contain lowercase letters, numbers, and hyphens",
     ),
 });
 
 type LinkInput = z.infer<typeof LinkSchema>;
 
 export async function createLinkAction(
-  input: LinkInput
+  input: LinkInput,
 ): Promise<{ success: true } | { error: string }> {
   const { userId } = await auth();
   if (!userId) return { error: "Unauthorized" };
@@ -31,7 +31,9 @@ export async function createLinkAction(
   try {
     await createLink({ ...parsed.data, userId });
   } catch {
-    return { error: "That slug is already taken. Please choose a different one." };
+    return {
+      error: "That slug is already taken. Please choose a different one.",
+    };
   }
 
   return { success: true };
@@ -39,7 +41,7 @@ export async function createLinkAction(
 
 export async function updateLinkAction(
   id: number,
-  input: LinkInput
+  input: LinkInput,
 ): Promise<{ success: true } | { error: string }> {
   const { userId } = await auth();
   if (!userId) return { error: "Unauthorized" };
@@ -53,14 +55,16 @@ export async function updateLinkAction(
     const updated = await updateLink(id, userId, parsed.data);
     if (!updated) return { error: "Link not found." };
   } catch {
-    return { error: "That slug is already taken. Please choose a different one." };
+    return {
+      error: "That slug is already taken. Please choose a different one.",
+    };
   }
 
   return { success: true };
 }
 
 export async function deleteLinkAction(
-  id: number
+  id: number,
 ): Promise<{ success: true } | { error: string }> {
   const { userId } = await auth();
   if (!userId) return { error: "Unauthorized" };

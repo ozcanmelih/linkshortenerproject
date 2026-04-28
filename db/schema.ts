@@ -6,8 +6,12 @@ export const links = pgTable("links", {
   slug: text("slug").unique().notNull(),
   url: text("url").notNull(),
   userId: text("user_id").notNull(),
-  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
-  updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow().notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
+  updatedAt: timestamp("updated_at", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
 });
 
 export type Link = InferSelectModel<typeof links>;

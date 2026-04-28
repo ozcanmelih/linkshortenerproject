@@ -30,14 +30,14 @@ export default function Home() {
       {/* Hero */}
       <section className="flex w-full flex-col items-center gap-6 px-6 py-28 text-center">
         <Badge variant="outline" className="text-sm">
-          Free to use · No credit card required
+          Always free to use · No credit card required
         </Badge>
         <h1 className="max-w-2xl text-5xl font-bold tracking-tight">
           Shorten links. Share with confidence.
         </h1>
         <p className="max-w-xl text-lg text-muted-foreground">
-          Turn long, unwieldy URLs into clean short links you can share anywhere.
-          Sign up for free and start managing your links today.
+          Turn long, unwieldy URLs into clean short links you can share
+          anywhere. Sign up for free and start managing your links today.
         </p>
         <Show when="signed-out">
           <div className="flex gap-3">

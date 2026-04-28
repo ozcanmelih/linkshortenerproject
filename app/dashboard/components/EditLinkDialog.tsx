@@ -21,7 +21,11 @@ interface EditLinkDialogProps {
   onOpenChange: (open: boolean) => void;
 }
 
-export function EditLinkDialog({ link, open, onOpenChange }: EditLinkDialogProps) {
+export function EditLinkDialog({
+  link,
+  open,
+  onOpenChange,
+}: EditLinkDialogProps) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [url, setUrl] = useState(link.url);

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-04-28T17:05:16.608Z",
+  "hook_event_name": "PostToolUse",
+  "session_id": "5d01cae7-7356-47ac-a792-32427ab25ccd",
+  "transcript_path": "/Users/melih.ozcan/Library/Application Support/Code/User/workspaceStorage/5ebf3840bb1e0902041597ed982cccb0/GitHub.copilot-chat/transcripts/5d01cae7-7356-47ac-a792-32427ab25ccd.jsonl",
+  "tool_name": "create_file",
+  "tool_input": {
+    "filePath": "/Users/melih.ozcan/dev/personal/Udemy - GitHub Copilot Beginner to Pro - AI for Coding & Development/my-projects/linkshortenerproject/.github/hooks/format.sh",
+    "content": "#!/usr/bin/env bash\n\ninput=$(cat)\ntool_name=$(echo \"$input\" | jq -r '.tool_name')\n\nif [ \"$tool_name\" = \"create_file\" ]; then\n  npx prettier --write .\nfi\n"
+  },
+  "tool_response": "",
+  "tool_use_id": "toolu_bdrk_01SUStSqjKNBS334UiixkbAh__vscode-1777394261186",
+  "cwd": "/Users/melih.ozcan/dev/personal/Udemy - GitHub Copilot Beginner to Pro - AI for Coding & Development/my-projects/linkshortenerproject"
+}

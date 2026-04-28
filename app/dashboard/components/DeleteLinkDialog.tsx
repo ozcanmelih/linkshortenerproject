@@ -21,7 +21,11 @@ interface DeleteLinkDialogProps {
   onOpenChange: (open: boolean) => void;
 }
 
-export function DeleteLinkDialog({ link, open, onOpenChange }: DeleteLinkDialogProps) {
+export function DeleteLinkDialog({
+  link,
+  open,
+  onOpenChange,
+}: DeleteLinkDialogProps) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 

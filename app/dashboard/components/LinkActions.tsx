@@ -29,7 +29,11 @@ export function LinkActions({ link }: LinkActionsProps) {
         </Button>
       </div>
       <EditLinkDialog link={link} open={editOpen} onOpenChange={setEditOpen} />
-      <DeleteLinkDialog link={link} open={deleteOpen} onOpenChange={setDeleteOpen} />
+      <DeleteLinkDialog
+        link={link}
+        open={deleteOpen}
+        onOpenChange={setDeleteOpen}
+      />
     </>
   );
 }

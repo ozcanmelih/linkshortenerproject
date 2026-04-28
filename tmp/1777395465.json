@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-04-28T16:57:45.244Z",
+  "hook_event_name": "PostToolUse",
+  "session_id": "5d01cae7-7356-47ac-a792-32427ab25ccd",
+  "transcript_path": "/Users/melih.ozcan/Library/Application Support/Code/User/workspaceStorage/5ebf3840bb1e0902041597ed982cccb0/GitHub.copilot-chat/transcripts/5d01cae7-7356-47ac-a792-32427ab25ccd.jsonl",
+  "tool_name": "replace_string_in_file",
+  "tool_input": {
+    "filePath": "/Users/melih.ozcan/dev/personal/Udemy - GitHub Copilot Beginner to Pro - AI for Coding & Development/my-projects/linkshortenerproject/app/test-page/page.tsx",
+    "oldString": "      <h1 className=\"text-2xl font-bold\">Test Page</h1>",
+    "newString": "      <h1 className=\"text-2xl font-bold\">Hello World</h1>"
+  },
+  "tool_response": "",
+  "tool_use_id": "toolu_bdrk_0181JfYPDfac41PPVt9gUmbj__vscode-1777394261185",
+  "cwd": "/Users/melih.ozcan/dev/personal/Udemy - GitHub Copilot Beginner to Pro - AI for Coding & Development/my-projects/linkshortenerproject"
+}
